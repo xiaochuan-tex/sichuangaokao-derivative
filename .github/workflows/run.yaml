@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: clone source
         run: |
-          curl -O https://www.overleaf.com/project/68639254b0d9c2d1203a4f64/download/zip
+          curl -o "source.zip" https://www.overleaf.com/project/68639254b0d9c2d1203a4f64/download/zip
           ls -l
 
       # - name: commit
