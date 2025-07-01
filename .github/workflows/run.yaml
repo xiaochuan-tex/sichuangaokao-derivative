@@ -14,7 +14,9 @@ jobs:
       - name: clone source
         run: |
           curl -o "source.zip" https://www.overleaf.com/project/68639254b0d9c2d1203a4f64/download/zip
-          ls -l
+          ls -R
+          unzip source.zip -d 四川省高考数学导数大题汇总
+
 
       # - name: commit
       #   run: |
