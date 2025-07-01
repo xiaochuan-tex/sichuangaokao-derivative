@@ -1,0 +1,25 @@
+name: Job
+permissions: write-all
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: clone source
+        run: |
+          git clone https://git.overleaf.com/68639254b0d9c2d1203a4f64 四川省高考数学导数大题汇总
+          ls -l
+
+      # - name: commit
+      #   run: |
+      #     git config --global user.name "GitHub Actions"
+      #     git config --global user.email "actions@github.com"
+      #     git add .
+      #     git commit -m 'update'
+      #     git push
