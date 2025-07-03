@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: clone source
         run: |
-          curl -o "source.zip" https://www.overleaf.com/project/68639254b0d9c2d1203a4f64/download/zip
+          curl -H "Authorization: Bearer olp_7sJHiPA056Tj43mxcKgyQRAXMHg9Q31VcKjc" https://api.overleaf.com/project/68660e3e227e10e0977b1216/download/zip  -o project.zip
           ls -R
           unzip ./source.zip -d ./四川省高考数学导数大题汇总
 
